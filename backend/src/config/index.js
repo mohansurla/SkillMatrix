@@ -1,16 +1,11 @@
 module.exports = {
-  // Database configuration
   database: {
-    // Add your database config here
+    path: process.env.DB_PATH || './data/skillmatrix.db',
   },
-
-  // JWT configuration
   jwt: {
-    secret: process.env.JWT_SECRET || 'your-secret-key',
+    secret: process.env.JWT_SECRET || 'skillmatrix_super_secret_2024_xK9mP3qR',
     expiresIn: process.env.JWT_EXPIRES_IN || '7d',
   },
-
-  // Server configuration
   server: {
     port: process.env.PORT || 5000,
     env: process.env.NODE_ENV || 'development',

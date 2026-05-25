@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-// Import route modules
-// const authRoutes = require('./auth');
-// const userRoutes = require('./users');
-
-// Use routes
-// router.use('/auth', authRoutes);
-// router.use('/users', userRoutes);
+router.use('/auth', require('./auth'));
+router.use('/users', require('./users'));
+router.use('/skills', require('./skills'));
+router.use('/modules', require('./modules'));
+router.use('/assignments', require('./assignments'));
+router.use('/evaluations', require('./evaluations'));
+router.use('/progress', require('./progress'));
+router.use('/notifications', require('./notifications'));
 
 module.exports = router;
